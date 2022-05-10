@@ -1,0 +1,342 @@
+<!-- Code by -->
+<!-- Aniket Mallick and Ankit Kumar Baranwal -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <!-- Custom CSS -->
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+ 
+
+<title>Home</title>
+<!-- CSS -->
+
+</head>
+    <style>
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 108px;
+      padding: 16px;
+      bottom: 8px;
+    }</style>
+<body>
+
+ 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  bg-steel fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Digital Health World</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto" >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Diseases
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/cancer">Breast Cancer</a></li>
+                <li><a class="dropdown-item" href="/diabetes">Diabetes</a></li>
+                <li><a class="dropdown-item" href="/heart">Heart </a></li>
+                <li><a class="dropdown-item" href="/liver">Liver</a></li>
+                <li><a class="dropdown-item" href="/kidney">Kidney</a></li>
+                <li><a class="dropdown-item" href="/Malaria">Malaria</a></li>
+                <li><a class="dropdown-item" href="/Pneumonia">Pneumonia</a></li>
+    
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+
+
+
+<section id="cover"  style="background-image: url('{{ url_for('static', filename='Home01.jpg') }}')">
+  <div id="cover-caption">
+      <div class="container" >
+          <div class="col-sm-10 col-sm-offset-1">
+              <h3  style="color:whitesmoke;" class="display-3" > Using Logistic Regression and Deep Learning Neural Network deployed to
+                Web to reduce Mortality rate due to Nocuous diseases  </h3>
+              
+              
+
+              <a href="#nav-main" class="btn btn-secondary-outline btn-sm" role="button">&darr;</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section id="what-we-do">
+   <div class="section-content">
+       <div class="container">
+           
+           <div class="row">
+               <div class="col-sm-12">
+                   <div class="card-group">
+                      <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='breast_cancer.jpg') }}"  height="300px" class="card-img-top" alt="Breast Cancer">
+                          <div class="card-body">
+                            <h5 class="card-title">Breast Cancer</h5>
+                            <p class="card-text">Breast cancer is cancer that develops from breast tissue. Signs of breast cancer may include a lump in the breast, a change in breast shape, dimpling of the skin, fluid coming from the nipple, a newly inverted nipple, or a red or scaly patch of skin.</p>
+                            <br>
+                            <a href="/cancer" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='diabetes01.jpg') }}"  height="300px" class="card-img-top" alt="Diabetes">
+                          <div class="card-body">
+                            <h5 class="card-title">Diabetes</h5>
+                            <p class="card-text">Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy.</p>
+                            <a href="/diabetes" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='heart01.jpg') }}"  height="300px" class="card-img-top" alt="Heart Disease">
+                          <div class="card-body">
+                            <h5 class="card-title">Heart Disease</h5>
+                            <p class="card-text">Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others. </p>
+                            <a href="/heart" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12">
+                      <div class="card-group">
+
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='liver01.jpg') }}"  height="300px" class="card-img-top" alt="Liver">
+                          <div class="card-body">
+                            <h5 class="card-title">Liver</h5>
+                            <p class="card-text">Liver disease is any disturbance of liver function that causes illness. The liver is responsible for many critical functions within the body and should it become diseased or injured, the loss of those functions can cause significant damage to the body. Liver disease is also referred to as hepatic disease.</p>
+                            <a href="/liver" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+
+                        <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='kidney01.jpg') }}"  height="300px" class="card-img-top" alt="Kidney">
+                          <div class="card-body">
+                            <h5 class="card-title">Kidney</h5>
+                            <p class="card-text">The kidneys play key roles in body function, not only by filtering the blood and getting rid of waste products, but also by balancing the electrolyte levels in the body, controlling blood pressure, and stimulating the production of red blood cells.</p>
+                            <br>
+                            <a href="/kidney" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+
+                       <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='malaria01.jpg') }}" height="300px"  class="card-img-top" alt="Malaria">
+                          <div class="card-body">
+                            <h5 class="card-title">Malaria</h5>
+                            <p class="card-text">Malaria is an acute febrile illness caused by Plasmodium parasites, which are spread to people through the bites of infected female Anopheles mosquitoes.</p>
+                            <br> <br>
+                            <a href="/Malaria" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-sm-4">
+                      <div class="card-group">
+
+
+                      <div class="card" style="width: 18rem;">
+                          <img src="{{ url_for('static', filename='pneumonia01.jpg') }}"  height="300px" class="card-img-top" alt="Pneumonia">
+                          <div class="card-body">
+                            <h5 class="card-title">Pneumonia</h5>
+                            <p class="card-text">Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus (purulent material), causing cough with phlegm or pus, fever, chills, and difficulty breathing. A variety of organisms, including bacteria, viruses and fungi, can cause pneumonia.</p>
+                            <a href="/Pneumonia" target="_blank" class="btn btn-primary">Lets Go!</a>
+                          </div>
+                        </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+
+
+  <div class= "container">
+
+     <div class="col-md-8">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          {% block content %}{% endblock %}
+  </div>
+
+     <h3>Overview</h3>
+     <hr>
+   
+        <p>
+          Health-Related Problems Analysis is Crucial for prevention and treatment. Nowadays people
+face various diseases due to environmental conditions and living habits. Common people get
+inadequate access to their disease prevention services in constraint to time, cost, and ease of
+access. Data, the heart of the 21st century along with data mining can play a significant role to
+overcome this problem. Machine Learning Algorithms like KNN, CNN, Logistic Regression can
+find hidden pattern information in huge medical data. So, creating and designing a system,
+providing a Web Portal with an ease to use User Interface and listing some very deadly diseases
+like Lung Cancer, Diabetes, Blood Pressure may control the Death Rate due to these diseases. In
+the proposed model, User Data is entered into the Web application, analysis is then performed in
+a real-time dataset using a pre-trained Machine Learning Model deployed to detect the respective
+disease and show the recommendations, preventions which needs to be undertaken shown to the
+user. Our Diagnosis system can act as a doctor for early diagnosis of disease for timely
+treatment, medications and can be a BIG LIFESAVER!
+
+
+      
+        <hr>
+    </p>
+    <h3>Application</h3>
+    <ul>
+      <li>To remove the dependencies on the doctors</li>
+      <li>To help out the poor and helpless people with the normal medical checkup</li>
+      <li>To help people avoid paying huge  amount to the doctors unnecessarily</li>
+      <li>To extend the role of the technology in the medical field</li>
+    </ul>
+    
+
+
+
+  </div>
+
+  <section id="about">
+    <div class="section-content">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="about-text">
+                    <h3 style="color:white;">About Us</h3>
+                    
+                    <p>Health-Related Problems Analysis is Crucial for prevention and treatment. Nowadays people
+                        face various diseases due to environmental conditions and living habits. Common people get
+                        inadequate access to their disease prevention services in constraint to time, cost, and ease of
+                        access. Data, the heart of the 21st century along with data mining can play a significant role to
+                        overcome this problem. Machine Learning Algorithms like KNN, CNN, Logistic Regression can
+                        find hidden pattern information in huge medical data. So, creating and designing a system,
+                        providing a Web Portal with an ease to use User Interface and listing some very deadly diseases
+                        like Lung Cancer, Diabetes, Blood Pressure may control the Death Rate due to these diseases. In
+                        the proposed model, User Data is entered into the Web application, analysis is then performed in
+                        a real-time dataset using a pre-trained Machine Learning Model deployed to detect the respective
+                        disease and show the recommendations, preventions which needs to be undertaken shown to the
+                        user. Our Diagnosis system can act as a doctor for early diagnosis of disease for timely
+                        treatment, medications and can be a BIG LIFESAVER!</p>
+                    
+                    <h5 style="color:white;">Follow Us on the web</h5>
+                    <a  style="color:white;" href="" class="btn btn-sm btn-secondary-outline">twitter</a>
+                    <a  style="color:white;" href="" class="btn btn-sm btn-secondary-outline">facebook</a>
+                    <a  style="color:white;"  href="" class="btn btn-sm btn-secondary-outline">youtube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="footer-main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <p>Copyright 2022.</p>
+            </br>
+            <p>Coded by:</p>
+                <p> <a href="https://www.linkedin.com/in/ankitkumarbaranwal/">Ankit Kumar Baranwal</a></p>
+                <p> <a href="https://www.linkedin.com/in/aniket-mallick-75572416b/">Aniket Mallick</a></p>
+            </div>
+           
+            <div class="col-sm-3">
+                <ul class="list-unstyled">
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">Youtube</a></li>
+                    <li><a href="">Linkedin</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h6 style="color:white;">Final Year Project</h6>
+                <p>Using  Deep Learning
+                    Neural Network deployed to a Web Application to reduce
+                    Mortality Rate due to Nocuous Diseases
+                </br>
+                    By</br>
+                    ANIKET MALLICK</br>
+                    ENROLMENT NO: 12018002002022</br>
+                    ANKIT KUMAR BARANWAL</br>
+                    ENROLMENT NO: 12018002002020</br>
+                    Under the Supervision of
+                    PROF. SHREEJITA MUKHERJEE</br>
+                    Department of Computer Science and Engineering</br>
+                    Institute of Engineering and Management</br>
+                    West Bengal, India</br></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Bootstrap JS. -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+
+</body>
+</html>

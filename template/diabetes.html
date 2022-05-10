@@ -1,0 +1,205 @@
+<!-- Code by -->
+<!-- Aniket Mallick and Ankit Kumar Baranwal -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+	<title>Diabetes_pred</title>
+
+</head>
+	<style>
+    #main-footer
+    {
+      color: #FFFFFF;
+      font-family: "Segoe UI";
+      background: #2B2B2B;
+      text-align: center;
+      margin-top: 125px;
+      padding: 16px;
+      bottom: 8px;
+    }
+
+    body
+    {
+      text-align: center;
+    }
+
+  </style>
+<body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-4" href="/">Digital Health World</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+          <a class="nav-item nav-link" href="/cancer">Cancer</a>
+          <a class="nav-item nav-link" href="/diabetes">Diabetes</a>
+          <a class="nav-item nav-link" href="/heart">Heart</a>
+          <a class="nav-item nav-link" href="/liver">Liver</a>
+          <a class="nav-item nav-link" href="/kidney">Kidney</a>
+           <a class="nav-item nav-link" href="/Malaria">Malaria</a>
+           <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+        </div>
+        <!-- Navbar Right Side
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/login">Login</a>
+          <a class="nav-item nav-link" href="/register">Register</a>
+        </div>-->
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="card",class="form-group">
+  <div class="card-header"><h1>Fill the Details of the Report</h1></div>
+  <div class="card-body">
+    <form action="/result" method="POST">
+
+		<div class="form-group row">
+      <label for="Pregnancies" class="col-md-4 col-form-label text-md-right">Pregnancies : </label>
+      <div class="col-md-6">
+            <input type="text" id="Pregnancies" class="form-control" name="Pregnancies">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="Glucose" class="col-md-4 col-form-label text-md-right">Glucose : </label>
+      <div class="col-md-6">
+            <input type="text" id="Glucose" class="form-control" name="Glucose">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="BloodPressure" class="col-md-4 col-form-label text-md-right">BloodPressure : </label>
+      <div class="col-md-6">
+            <input type="text" id="BloodPressure" class="form-control" name="BloodPressure">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="SkinThickness" class="col-md-4 col-form-label text-md-right">SkinThickness : </label>
+      <div class="col-md-6">
+            <input type="text" id="SkinThickness" class="form-control" name="SkinThickness">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="Insulin" class="col-md-4 col-form-label text-md-right">Insulin : </label>
+      <div class="col-md-6">
+            <input type="text" id="Insulin" class="form-control" name="Insulin">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="BMI" class="col-md-4 col-form-label text-md-right">BMI : </label>
+      <div class="col-md-6">
+            <input type="text" id="BMI" class="form-control" name="BMI">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="DiabetesPedigreeFunction" class="col-md-4 col-form-label text-md-right">DiabetesPedigreeFunction : </label>
+      <div class="col-md-6">
+            <input type="text" id="DiabetesPedigreeFunction" class="form-control" name="DiabetesPedigreeFunction">
+      </div>
+    </div>
+    <br>
+
+		<div class="form-group row">
+      <label for="Age" class="col-md-4 col-form-label text-md-right">Age : </label>
+      <div class="col-md-6">
+            <input type="text" id="Age" class="form-control" name="Age">
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <button type="submit" class="submit-btn btn btn-primary" value="Submit">Submit</button><br><br>
+</form>
+  </div>
+
+    </div>
+
+    <footer id="footer-main">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-3">
+                  <p>Copyright 2022.</p>
+              </br>
+              <p>Coded by:</p>
+                  <p> <a href="#">Ankit Kumar Baranwal</a></p>
+                  <p> <a href="#">Aniket Mallick</a></p>
+              </div>
+
+              <div class="col-sm-3">
+                  <ul class="list-unstyled">
+                      <li><a href="">Facebook</a></li>
+                      <li><a href="">Twitter</a></li>
+                      <li><a href="">Youtube</a></li>
+                      <li><a href="">Linkedin</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-3">
+                  <h6 style="color:white;">Final Year Project</h6>
+                  <p>Using  Deep Learning
+                      Neural Network deployed to a Web Application to reduce
+                      Mortality Rate due to Nocuous Diseases
+                  </br>
+                      By</br>
+                      ANIKET MALLICK</br>
+                      ENROLMENT NO: 12018002002022</br>
+                      ANKIT KUMAR BARANWAL</br>
+                      ENROLMENT NO: 12018002002020</br>
+                      Under the Supervision of
+                      PROF. SHREEJITA MUKHERJEE</br>
+                      Department of Computer Science and Engineering</br>
+                      Institute of Engineering and Management</br>
+                      West Bengal, India</br></p>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
